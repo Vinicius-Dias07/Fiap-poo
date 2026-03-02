@@ -4,23 +4,16 @@ import br.com.exercicioDaAula.model.Onibus;
 
 public class OnibusTeste {
     public static void main(String[] args) {
-        Onibus onibus = new Onibus();
-        Onibus onibus2 = new Onibus();
-        onibus.marca = "Mercedes-Benz";
-        onibus.modelo = "Mercedes-Benz O-500U";
-        onibus.capacidade = 75;
-        onibus.anoDeFabricacao = 2019;
-        onibus.nivelDisel = 87.8;
+        Onibus onibus = new Onibus("Mercedes-Benz O-500U", "Mercedes-Benz", 2019, 75,500);
+        Onibus onibus2 = new Onibus("Volvo B270F","Volvo", 2022,65,400);
 
-        onibus2.marca = "Volvo";
-        onibus2.modelo = "Volvo B270F";
-        onibus2.capacidade = 65;
-        onibus2.anoDeFabricacao = 2022;
-        onibus2.nivelDisel = 120;
 
 
         System.out.println("---Ficha-tecnica-onibus---");
 
+        onibus.alterarEstadoDoMotor();
+        onibus.alterarEstadoDoMotor();
+/*
         System.out.println("Marca:"+ onibus.marca);
         System.out.println("Modelo:"+ onibus.modelo);
         System.out.println("Capacidade:"+ onibus.capacidade+ " pessoas");
@@ -33,7 +26,7 @@ public class OnibusTeste {
         System.out.println("Ano de fabricacao:"+ onibus2.anoDeFabricacao);
         System.out.println("Nivel do disel:"+ onibus2.nivelDisel+" L");
 
-
+*/
 
     }
 }
