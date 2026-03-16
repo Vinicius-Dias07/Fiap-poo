@@ -4,15 +4,20 @@ import br.com.exercicioDaAula.model.Onibus;
 
 public class OnibusTeste {
     public static void main(String[] args) {
-        Onibus onibus = new Onibus("Mercedes-Benz O-500U", "Mercedes-Benz", 2019, 75,500);
-        Onibus onibus2 = new Onibus("Volvo B270F","Volvo", 2022,65,400);
+        Onibus onibus = new Onibus("Mercedes-Benz O-500U", "Mercedes-Benz", 2019);
+        onibus.setCapacidadePessoas(78);
+        onibus.setNivelDisel(45);
 
+        Onibus onibus2 = new Onibus("Volvo B270F","Volvo", 2022);
+        onibus2.setCapacidadePessoas(38);
+        onibus2.setNivelDisel(80);
 
 
         System.out.println("---Ficha-tecnica-onibus---");
-
         onibus.alterarEstadoDoMotor();
+        System.out.println(onibus);
         onibus.alterarEstadoDoMotor();
+        System.out.println(onibus);
 /*
         System.out.println("Marca:"+ onibus.marca);
         System.out.println("Modelo:"+ onibus.modelo);

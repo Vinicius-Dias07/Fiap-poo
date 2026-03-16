@@ -10,14 +10,14 @@ public class Onibus {
     private int capacidadeDisel;
 
     //construtor
-    public Onibus(String modelo, String marca, int anoDeFabricacao, int capacidadePessoas, int capacidadeDisel) {
+    public Onibus(String modelo, String marca, int anoDeFabricacao) {
         this.modelo = modelo;
         this.marca = marca;
-        this.anoDeFabricacao = anoDeFabricacao;
-        this.capacidadePessoas = capacidadePessoas;
+        this.anoDeFabricacao = 0;
+        this.capacidadePessoas = 0;
         this.motorLigado = false;
         this.nivelDisel = 0;
-        this.capacidadeDisel = capacidadeDisel;
+        this.capacidadeDisel = 0;
     }
 
     //metodos
@@ -37,7 +37,7 @@ public class Onibus {
     }
 
 
-        public void setModelo(String modelo) {
+    public void setModelo(String modelo) {
         this.modelo = modelo;
     }
 
@@ -79,5 +79,18 @@ public class Onibus {
 
     public void setMotorLigado(boolean motorLigado) {
         this.motorLigado = motorLigado;
+    }
+
+    @Override
+    public String toString() {
+        return "Onibus{" +
+                "modelo='" + modelo + '\'' +
+                ", marca='" + marca + '\'' +
+                ", anoDeFabricacao=" + anoDeFabricacao +
+                ", nivelDisel=" + nivelDisel +
+                ", capacidadePessoas=" + capacidadePessoas +
+                ", motorLigado=" + motorLigado +
+                ", capacidadeDisel=" + capacidadeDisel +
+                '}';
     }
 }
