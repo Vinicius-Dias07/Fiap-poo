@@ -1,5 +1,6 @@
 package br.com.exercicioDaAula.main;
 
+import br.com.exercicioDaAula.model.Motorista;
 import br.com.exercicioDaAula.model.Onibus;
 
 public class OnibusTeste {
@@ -18,6 +19,9 @@ public class OnibusTeste {
         System.out.println(onibus);
         onibus.alterarEstadoDoMotor();
         System.out.println(onibus);
+
+        Motorista motorista = new Motorista("Cleber", "123.456.789.88", onibus);
+        System.out.println(motorista);
 /*
         System.out.println("Marca:"+ onibus.marca);
         System.out.println("Modelo:"+ onibus.modelo);

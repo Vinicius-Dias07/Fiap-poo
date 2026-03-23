@@ -2,6 +2,7 @@ package br.com.fiapride.main;
 
 import br.com.fiapride.model.Passageiro;
 import br.com.fiapride.model.Veiculo;
+import br.com.fiapride.model.Viagem;
 
 public class SistemaPrincipal {
     public static void main(String[] args) {
@@ -13,5 +14,8 @@ public class SistemaPrincipal {
         passageiro.adicionarSaldo(10);
         passageiro.adicionarSaldo(45);
         passageiro.pagarViagem(80);
+
+        Viagem viagem = new Viagem(passageiro, veiculo,"Fiap-Paulista");
+        viagem.exibirViagem();
     }
 }
