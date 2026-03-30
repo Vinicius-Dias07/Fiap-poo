@@ -1,23 +1,9 @@
 package br.com.exercicioDaAula.model;
 
-public class Onibus {
-    private String modelo;
-    private String marca;
-    private int anoDeFabricacao;
-    private double nivelDisel;
-    private int capacidadePessoas;
-    private boolean motorLigado;
-    private int capacidadeDisel;
+public class Onibus extends Veiculo {
 
-    //construtor
-    public Onibus(String modelo, String marca, int anoDeFabricacao) {
-        this.modelo = modelo;
-        this.marca = marca;
-        this.anoDeFabricacao = 0;
-        this.capacidadePessoas = 0;
-        this.motorLigado = false;
-        this.nivelDisel = 0;
-        this.capacidadeDisel = 0;
+    public Onibus(String placa, String modelo, double capacidadeDoTanque, String marca, int anoDeFabricacao) {
+        super(placa, modelo, capacidadeDoTanque, marca, anoDeFabricacao);
     }
 
     //metodos
@@ -29,68 +15,5 @@ public class Onibus {
             setMotorLigado(true);
             System.out.println("Ligando o motor!");
         }
-    }
-
-    //Getters e Setters
-    public String getModelo() {
-        return modelo;
-    }
-
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public int getAnoDeFabricacao() {
-        return anoDeFabricacao;
-    }
-
-    public void setAnoDeFabricacao(int anoDeFabricacao) {
-        this.anoDeFabricacao = anoDeFabricacao;
-    }
-
-    public double getNivelDisel() {
-        return nivelDisel;
-    }
-
-    public void setNivelDisel(double nivelDisel) {
-        this.nivelDisel = nivelDisel;
-    }
-
-    public int getCapacidadePessoas() {
-        return capacidadePessoas;
-    }
-
-    public void setCapacidadePessoas(int capacidadePessoas) {
-        this.capacidadePessoas = capacidadePessoas;
-    }
-
-    public boolean isMotorLigado() {
-        return motorLigado;
-    }
-
-    public void setMotorLigado(boolean motorLigado) {
-        this.motorLigado = motorLigado;
-    }
-
-    @Override
-    public String toString() {
-        return "Onibus{" +
-                "modelo='" + modelo + '\'' +
-                ", marca='" + marca + '\'' +
-                ", anoDeFabricacao=" + anoDeFabricacao +
-                ", nivelDisel=" + nivelDisel +
-                ", capacidadePessoas=" + capacidadePessoas +
-                ", motorLigado=" + motorLigado +
-                ", capacidadeDisel=" + capacidadeDisel +
-                '}';
     }
 }
